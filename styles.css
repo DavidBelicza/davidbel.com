@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+::selection {
+  background-color: #ffeb3b;
+}
+
+body {
+  background: #ffffff;
+  margin: 15px;
+}
+
+a,
+a:hover,
+a:visited,
+a:focus {
+  text-decoration: none;
+}
+
+.block-namecard {
+  max-width: 420px;
+  margin: 100px auto 0 auto;
+}
+
+.block-intro {
+  width: 100%;
+  clear: both;
+}
+
+.block-logo {
+  margin: 0;
+  float: left;
+}
+
+.block-title .adobe-certification {
+  height: 40px;
+  width: auto;
+  margin: 5px 0 0 10px;
+}
+
+.block-title {
+  margin: 0;
+  float: left;
+}
+
+.block-logo img {
+  width: 110px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.title-font-family {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.title-name {
+  margin: 0 0 0 10px;
+  padding: 0;
+  line-height: 1.2;
+  color: #329F78;
+  font-size: 14pt;
+  text-transform: uppercase;
+}
+
+.title-profession {
+  margin: 0 0 0 10px;
+  padding: 0;
+  line-height: 1.2;
+  color: #111111;
+  font-size: 14pt;
+}
+
+.block-intro p {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  text-align: center;
+  color: #222222;
+  padding: 170px 0 40px 0;
+}
+
+.highlighted-text {
+  color: #000000;
+  background-color: #ffeb3b;
+  padding: 0 3px;
+}
+
+.block-share .platform {
+  margin: 0 auto;
+  width: 232px;
+  background-color: #eeeeee;
+  border-bottom: 3px solid #cccccc;
+  border-right: 3px solid #cccccc;
+  border-radius: 10px;
+  padding: 8px 16px;
+}
+
+.emblem {
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-indent: -99999px;
+  margin: 8px;
+  opacity: 0.6;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border-color: #bbbbbb;
+  border-width: 1px;
+  border-style: solid;
+  transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+}
+
+.emblem:hover {
+  opacity: 1;
+  background-color: #ffeb3b;
+  border-color: #555555;
+}
+
+.emblem-linkedin {
+  background-image: url("/images/linkedin.png");
+}
+
+.emblem-github {
+  background-image: url("/images/github.png");
+}
+
+.emblem-facebook {
+  background-image: url("/images/facebook.png");
+}
+
+.emblem-email {
+  background-image: url("/images/email.png");
+}
+
+.emblem-instagram {
+  background-image: url("/images/instagram.png");
+  display: none;
+}
+
+.emblem-twitter {
+  background-image: url("/images/twitter.png");
+  display: none;
+}
+
+.block-author {
+  margin-top: 200px;
+  margin-bottom: 30px;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 8px;
+  text-align: center;
+  color: #222222;
+}
+
+.block-author p {
+  margin: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .block-share .platform {
+    width: 115px;
+  }
+
+  .block-namecard {
+    margin-top: 40px;
+    max-width: 370px;
+  }
+
+  .title-name,
+  .title-profession {
+    font-size: 12pt;
+  }
+
+  .block-logo img {
+    width: 100px;
+  }
+
+  .block-intro p {
+    padding: 120px 0 40px 0;
+  }
+
+  .block-author {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .block-share .platform {
+    width: 115px;
+  }
+
+  .block-namecard {
+    margin-top: 40px;
+    max-width: 350px;
+  }
+
+  .title-name,
+  .title-profession {
+    font-size: 11pt;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .block-logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .block-title {
+    clear: both;
+    text-align: center;
+    width: 100%;
+  }
+
+  .title-name,
+  .title-profession {
+    font-size: 11pt;
+    margin-left: 0;
+  }
+
+  .block-intro p {
+    padding: 40px 0 40px 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #252525;
+  }
+
+  .title-name {
+    color: #4ef4b8;
+  }
+
+  .block-title .adobe-certification {
+    filter: invert(72%) sepia(48%) saturate(251%) hue-rotate(125deg) brightness(161%) contrast(78%);
+  }
+
+  .title-profession {
+    color: #dddddd;
+  }
+
+  .block-intro p {
+    color: #dddddd
+  }
+
+  .block-share .platform {
+    background-color: #444444;
+    border-bottom: 3px solid #555;
+    border-right: 3px solid #555;
+  }
+
+  .emblem {
+    border-color: #444;
+  }
+}
