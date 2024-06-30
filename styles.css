@@ -5,8 +5,16 @@
 }
 
 body {
-  background: #ffffff;
-  margin: 15px;
+  background: white;
+  background-image: radial-gradient(#999 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: 5px -5px;
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 a,
@@ -18,7 +26,7 @@ a:focus {
 
 .block-namecard {
   max-width: 420px;
-  margin: 100px auto 0 auto;
+  margin: 10px auto 0 auto;
 }
 
 .block-intro {
@@ -46,6 +54,17 @@ a:focus {
   width: 110px;
   height: auto;
   border-radius: 10px;
+  animation: onload 0.5s ease-out forwards;
+}
+@keyframes onload {
+  from {
+    margin-left: -50px;
+    margin-right: 20px;
+  }
+  to {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .title-font-family {
@@ -62,6 +81,7 @@ a:focus {
   color: #329F78;
   font-size: 14pt;
   text-transform: uppercase;
+  background: white;
 }
 
 .title-profession {
@@ -70,6 +90,11 @@ a:focus {
   line-height: 1.2;
   color: #111111;
   font-size: 14pt;
+  background: white;
+}
+
+.block-intro {
+  padding: 40px 0 40px 0;
 }
 
 .block-intro p {
@@ -79,7 +104,8 @@ a:focus {
   font-size: 14px;
   text-align: center;
   color: #222222;
-  padding: 170px 0 40px 0;
+  padding: 0;
+  background: white;
 }
 
 .highlighted-text {
@@ -96,6 +122,11 @@ a:focus {
   border-right: 3px solid #cccccc;
   border-radius: 10px;
   padding: 8px 16px;
+  list-style: none;
+}
+
+.block-share li {
+  display: inline;
 }
 
 .emblem {
@@ -152,7 +183,7 @@ a:focus {
 }
 
 .block-author {
-  margin-top: 200px;
+  margin-top: 20px;
   margin-bottom: 30px;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -165,6 +196,7 @@ a:focus {
 
 .block-author p {
   margin: 0;
+  background: white;
 }
 
 @media screen and (max-width: 500px) {
@@ -184,14 +216,6 @@ a:focus {
 
   .block-logo img {
     width: 100px;
-  }
-
-  .block-intro p {
-    padding: 120px 0 40px 0;
-  }
-
-  .block-author {
-    margin-top: 100px;
   }
 }
 
@@ -228,14 +252,22 @@ a:focus {
     font-size: 11pt;
     margin-left: 0;
   }
-
-  .block-intro p {
-    padding: 40px 0 40px 0;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
+  ::selection {
+    color: black;
+  }
+
   body {
+    background-color: #252525;
+    background-image: radial-gradient(#565656 1px, transparent 0);
+  }
+
+  .block-author p,
+  .block-intro p,
+  .title-name,
+  .title-profession {
     background-color: #252525;
   }
 
@@ -251,8 +283,9 @@ a:focus {
     color: #dddddd;
   }
 
-  .block-intro p {
-    color: #dddddd
+  .block-intro p,
+  .block-author p {
+    color: #dddddd;
   }
 
   .block-share .platform {
